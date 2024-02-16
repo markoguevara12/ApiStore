@@ -1,4 +1,5 @@
 ﻿using FurnitureStore.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FurnitureStore.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 

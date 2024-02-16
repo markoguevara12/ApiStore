@@ -65,9 +65,9 @@ namespace FurnitureStore.Api.Controllers
            
             _db.OrderDetails.RemoveRange(existingOrder.OrderDetails); //Se eliminan todos los detalles viejos para luego reemplazarlos por los nuevos
 
-             _db.Order.Update(existingOrder); // aqui se actualizan los valores de la orden por los nuevos valores
-             _db.OrderDetails.AddRange(order.OrderDetails); // aqui se agregan los nuevos detalles (los que borramos previamente) que le pasamos por parametros
-            await _db.SaveChangesAsync(); //se guardan los datos en la base de datos
+             _db.Order.Update(existingOrder); 
+             _db.OrderDetails.AddRange(order.OrderDetails); 
+            await _db.SaveChangesAsync(); 
             return Ok();
         }
 
